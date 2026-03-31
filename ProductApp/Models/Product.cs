@@ -35,6 +35,11 @@ namespace ProductApp.Models
             }
         }
 
+        public double TotalValue
+        {
+            get { return Price * Quantity; }
+        }
+
         public Product(string name, double price, int quantity)
         {
             Name = name;
