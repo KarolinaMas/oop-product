@@ -37,6 +37,18 @@ static void LogProductList(List<Product> list)
     Console.WriteLine($"Total value of products in the list: {totalSum} eur.");
 }
 
+static void LogProduct(Product product)
+{
+    if (product != null)
+    {
+        Console.WriteLine($"Most expensive car: {product.Name} {product.Price} {product.Quantity}");
+    }
+    else
+    {
+        Console.WriteLine("Product is not found.");
+    }
+}
+
 var carsList = new List<Product>
 {
     new Product("Fiat 500", 2000.00, 2),
@@ -47,3 +59,13 @@ var carsList = new List<Product>
 };
 
 LogProductList(carsList);
+
+Product mostExpensiveCar = ProductHelper.MostExpensive(carsList);
+
+LogProduct(mostExpensiveCar);
+
+// ex. 6 test MostExpensive method with maxPrice parameter
+
+Product maxExpensiveCar = ProductHelper.MostExpensive(carsList, 2000);
+
+LogProduct(maxExpensiveCar);
