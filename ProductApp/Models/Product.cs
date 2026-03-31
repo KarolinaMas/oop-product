@@ -5,6 +5,8 @@ namespace ProductApp.Models
         private string name;
         private double price;
         private int quantity;
+        private static int productCount;
+
         public string Name
         {
             get { return name; }
@@ -35,6 +37,11 @@ namespace ProductApp.Models
             }
         }
 
+        public static int ProductCount
+        {
+            get { return productCount; }
+        }
+
         public double TotalValue
         {
             get { return Price * Quantity; }
@@ -45,6 +52,7 @@ namespace ProductApp.Models
             Name = name;
             Price = price;
             Quantity = quantity;
+            productCount++;
         }
     }
 }

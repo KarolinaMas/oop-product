@@ -6,9 +6,15 @@ var product1 = new Product("HP laptop", 600.00, 20);
 
 Console.WriteLine(product1.Name);
 
-// ex. 3 - test TotalValue property
+// ex. 4 - test ProductCount
+
+Console.WriteLine(Product.ProductCount);
 
 var product2 = new Product("Speakers", 80.00, 4);
+
+Console.WriteLine(Product.ProductCount);
+
+// ex. 3 - test TotalValue property
 
 Console.WriteLine(product1.TotalValue);
 Console.WriteLine(product2.TotalValue);
